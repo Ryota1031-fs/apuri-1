@@ -1,0 +1,88 @@
+/* style.css：ページの見た目（色・大きさ・並び方）を決めるファイル */
+
+/* よく使う色に名前をつけておく。ここを変えると全体の色が変わる */
+:root {
+  --main: #e8590c;      /* メインのオレンジ */
+  --dark: #1a1a1a;      /* 濃い黒 */
+  --light: #f6f4f1;     /* 背景の明るい色 */
+  --text: #2b2b2b;      /* 文字の色 */
+}
+
+body {
+  margin: 0;
+  font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+  color: var(--text);
+  background: var(--light);
+  line-height: 1.7;
+}
+
+/* 一番上の大きな見出しエリア */
+.hero {
+  background: linear-gradient(135deg, var(--dark), #3a3a3a);
+  color: white;
+  text-align: center;
+  padding: 72px 16px;
+}
+.hero h1 {
+  font-size: 2.6rem;
+  margin: 8px 0 12px;
+}
+.hero-sub {
+  color: var(--main);
+  letter-spacing: 0.3em;
+  font-weight: bold;
+  margin: 0;
+}
+
+main {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+h2 {
+  border-left: 6px solid var(--main);
+  padding-left: 12px;
+  margin-top: 48px;
+}
+
+/* 魅力の箇条書き */
+.points li {
+  margin-bottom: 12px;
+}
+.points strong {
+  display: block;
+  color: var(--main);
+}
+
+/* 種類のカードを横に並べる（画面が狭いと自動で折り返す） */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid var(--main);
+}
+.card h3 {
+  margin: 0 0 8px;
+}
+.card p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.spots li {
+  margin-bottom: 8px;
+}
+
+footer {
+  background: var(--dark);
+  color: #bbb;
+  text-align: center;
+  padding: 24px 16px;
+}
