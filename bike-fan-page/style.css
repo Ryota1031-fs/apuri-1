@@ -86,3 +86,29 @@ footer {
   text-align: center;
   padding: 24px 16px;
 }
+
+/* 好きな一台（ZX-6R）のコーナー。カワサキのライムグリーンを使う */
+.favorite {
+  --green: #6bbf23;
+  background: var(--dark);
+  color: white;
+  border-radius: 16px;
+  padding: 8px 24px 20px;
+  margin-top: 48px;
+  border-left: 8px solid var(--green);
+}
+.favorite h2 {
+  border-left: none;
+  padding-left: 0;
+  margin-top: 0;
+  font-size: 1.8rem;
+}
+.favorite-label {
+  color: var(--green);
+  letter-spacing: 0.3em;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+.favorite .points strong {
+  color: var(--green);
+}
